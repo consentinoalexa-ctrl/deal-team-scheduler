@@ -1,0 +1,14 @@
+{
+  "name": "deal-team-scheduler",
+  "version": "1.0.0",
+  "description": "Outlook add-in that saves deal teams and adds a whole team to a meeting invite in one click.",
+  "private": true,
+  "scripts": {
+    "manifest": "node scripts/build-manifest.js",
+    "manifest:local": "node scripts/build-manifest.js https://localhost:3000",
+    "validate": "npx --yes office-addin-manifest validate manifest.xml",
+    "certs": "npx --yes office-addin-dev-certs install",
+    "start": "npx --yes http-server docs -S -C ~/.office-addin-dev-certs/localhost.crt -K ~/.office-addin-dev-certs/localhost.key -p 3000 -c-1"
+  },
+  "license": "UNLICENSED"
+}
